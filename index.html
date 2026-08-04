@@ -8,16 +8,20 @@
     body {
       background-color: #586654;
       margin: 0;
-      height: 100vh;
-      width: 100vw;
-      color: white
+      min-height: 100vh;
+      color: white;
     }
-    .header-container {
-      background-color: #5c6e5a;
-      text-align: center;
-      padding: 30px;
-      border: 2px solid white;
-      margin: 40px auto; 
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #3b4739;
+    }
+    .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;  
     }
     .content-container {
       text-align: center;
@@ -27,10 +31,25 @@
       list-style-position: inside;
       padding: 0;
     }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
-  <header class="header-container">Green Page Logo</header>
+  <header class="header">
+  <div class="logo">GreenPage</div>
+  <nav class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+  </nav>
+</header>
   <main class="content-container">
     <h1>Welcome to the Green Page!</h1>
     <h2>About</h2>
