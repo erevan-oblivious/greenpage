@@ -53,7 +53,7 @@
       background-color: #3b4739; /* Darker card background for contrast */
       padding: 24px; /* Adds internal spacing for content */
       border-radius: 8px; /* Softens the corners */
-      border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle border for definition */
+      border: 1px solid #FFFFFF1A ; /* Subtle border for definition */
       text-align: left;   /* Left-aligns inner card text for cleaner reading */
     }
     .card h2 { /* Heading styling within cards */
@@ -65,14 +65,25 @@
     font-size: 0.95rem; /* Slightly smaller font size for card text */
     line-height: 1.5;   /* Gives lines of text room to breathe */
     } 
-    .site-footer {
+    .site-footer { /* Footer styling */
     margin-top: auto;       /* Pushes the footer to the bottom of the page by putting all available space above it */
     background-color: #3b4739;
     text-align: center;
     padding: 20px;
     font-size: 0.85rem;
     color: #a3b8a3;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #FFFFFF1A 
+    }
+    @media (max-width: 600px) {
+      .header {
+      flex-direction: column; /* Overrides row alignment to stack logo and nav vertically */
+      gap: 15px;             /* Creates vertical space between logo and nav links */
+      padding: 20px;          /* Reduces horizontal padding on narrow screens */
+      }
+      .nav-links {
+      flex-wrap: wrap;       /* Allows links to wrap safely if the screen is extremely narrow */
+      justify-content: center;
+      }
     } 
   </style>
 </head>
