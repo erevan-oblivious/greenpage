@@ -21,7 +21,7 @@ img, video {
 }
 .card-image {
   width: 100%;
-  aspect-ratio: 16 / 9; /* Sets a fixed 16:9 aspect ratio box */
+  aspect-ratio: auto; /* Maintains the original aspect ratio of the image */
   object-fit: cover;    /* Centers and crops the image to fit without stretching */
   border-radius: 6px;
   margin-bottom: 16px;
