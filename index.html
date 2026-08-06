@@ -40,6 +40,10 @@
     .nav-links a { /* Styling for navigation links */
       color: white; /* White text color for visibility against dark background */
       text-decoration: none; /* Removes underline from links */
+      transition: color 0.2s ease;  /* Smoothly animates color changes over 0.2 seconds */
+    }
+    .nav-links a:hover {
+      color: #ffffff;               /* Brightens link text to solid white on hover */
     }
     .cards-container { /* Container for the cards */
       display: flex; /* Flexbox layout for cards */
@@ -55,6 +59,12 @@
       border-radius: 8px; /* Softens the corners */
       border: 1px solid #FFFFFF1A ; /* Subtle border for definition */
       text-align: left;   /* Left-aligns inner card text for cleaner reading */
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);                /* Lifts the card up by 6 pixels */
+      border-color: #c0dbc0;                      /* Accent border highlight */
+      box-shadow: 0 12px 24px #0000003A; /* Adds a soft shadow for depth */
     }
     .card h2 { /* Heading styling within cards */
       margin-top: 0; /* Removes default top margin for tighter spacing */
