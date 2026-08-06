@@ -13,6 +13,33 @@
   --font-size-base: 1rem;
   --font-size-lg: 1.2rem;
 }
+/* Fluid Media Reset */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Sets a fixed 16:9 aspect ratio box */
+  object-fit: cover;    /* Centers and crops the image to fit without stretching */
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+/* Responsive Video Container */
+.video-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 24px 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.video-container iframe,
+.video-container video {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 body { /* Global body styling */
   display: flex; /* Enables flexbox layout for the whole body */
   flex-direction: column; /* Stacks whole body including header, main, and footer vertically */
