@@ -1,66 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Green Page</title>
-  <style>
-    body {
-      background-color: #586654;
-      margin: 0;
-      min-height: 100vh;
-      color: white;
+<!DOCTYPE html> /* Declares the document type and version of HTML */
+<html lang="en"> /* Sets the language of the document to English */
+<head> /* Head section containing metadata and styles */
+  <meta charset="UTF-8"> /* Specifies the character encoding for the document */
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> /* Ensures proper scaling on mobile devices */
+  <title>Green Page</title> /* Sets the title of the webpage displayed in the browser tab */
+  <style> /* Internal CSS for styling the webpage */
+    body { /* Global body styling */
+      background-color: #586654; /* Dark green background for a natural feel */
+      margin: 0; /* Removes default margin for full-width layout */
+      min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+      color: white; /* Sets default text color to white for readability */
     }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background-color: #3b4739;
+    .header { /* Header styling */
+      display: flex; /* Flexbox layout for header */
+      justify-content: space-between; /* Distributes space between logo and navigation links */
+      align-items: center; /* Vertically centers items in the header */
+      padding: 20px 40px; /* Adds padding around the header content */
+      background-color: #3b4739; /* Darker header background for contrast */
     }
-    .logo {
-    font-weight: bold;
-    font-size: 1.2rem;
-    letter-spacing: 1px;  
+    .logo { /* Logo styling */
+    font-weight: bold; /* Makes the logo text bold for emphasis */
+    font-size: 1.2rem; /* Slightly larger font size for the logo */
+    letter-spacing: 1px; /* Adds spacing between letters for a cleaner look */
     }
-    .content-container {
-      text-align: center;
-      padding: 40px;
+    .content-container { /* Main content container styling */
+      text-align: center; /* Centers the content horizontally */
+      padding: 40px;/* Adds padding around the main content for spacing */
     }
-    ul {
-      list-style-position: inside;
-      padding: 0;
+    ul { /* Styling for unordered lists */
+      list-style-position: inside; /* Ensures bullets are inside the list item box */
+      padding: 0; /* Removes default padding for cleaner alignment */
     }
-    .nav-links {
-      display: flex;
-      gap: 20px;
+    .nav-links { /* Navigation links container styling */
+      display: flex; /* Flexbox layout for navigation links */
+      gap: 20px; /* Adds space between each navigation link */
     }
-    .nav-links a {
-      color: white;
-      text-decoration: none;
+    .nav-links a { /* Styling for navigation links */
+      color: white; /* White text color for visibility against dark background */
+      text-decoration: none; /* Removes underline from links */
     }
-  </style>
+    .cards-container { /* Container for the cards */
+      display: flex; /* Flexbox layout for cards */
+      gap: 20px; /* Space between cards */
+      flex-wrap: wrap;    /* Wraps cards onto a new line on small screens */
+      margin-top: 30px; /* Adds space above the cards */
+    }   
+    .card { /* Individual card styling */
+      flex: 1;            /* Forces all 3 cards to share available space equally */
+      min-width: 220px;   /* Triggers a wrap when a card gets narrower than 220px */
+      background-color: #3b4739; /* Darker card background for contrast */
+      padding: 24px; /* Adds internal spacing for content */
+      border-radius: 8px; /* Softens the corners */
+      border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle border for definition */
+      text-align: left;   /* Left-aligns inner card text for cleaner reading */
+    }
+    .card h2 { /* Heading styling within cards */
+      margin-top: 0; /* Removes default top margin for tighter spacing */
+      color: #c0dbc0;     /* Muted light green accent color for headings */
+    } 
+    .card p { /* Paragraph styling within cards */
+    margin-bottom: 0; /* Removes default bottom margin for tighter spacing */
+    font-size: 0.95rem; /* Slightly smaller font size for card text */
+    line-height: 1.5;   /* Gives lines of text room to breathe */
+    } 
+  </style> /* End of internal CSS */
 </head>
-<body>
-  <header class="header">
-  <div class="logo">GreenPage</div>
-  <nav class="nav-links">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-  </nav>
-</header>
+<body> /* Body section containing the visible content of the webpage */
+  <header class="header"> /* Header section containing the logo and navigation links */
+    <div class="logo">GreenPage</div> /* Logo text for the website */
+    <nav class="nav-links"> /* Navigation links container */
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+    </nav>
+  </header>
   <main class="content-container">
-    <h1>Welcome to the Green Page!</h1>
-    <h2>About</h2>
-    <p><strong>This page is designed to be simple and calming.</strong></p>
-    <ul>
-    <li>Relaxing green background</li>
-    <li>Minimalistic design</li>
-    <li>Easy on the eyes</li>
-    </ul>
-    <h2>Feel free to explore and relax!</h2>
-    <p>Thank you for visiting!</p>
+    <h1>Welcome to GreenPage</h1>
+    <p>Building clean, fast, eco-friendly web experiences.</p>
+    <section class="cards-container">
+      <div class="card">
+        <h2>Fast Performance</h2>
+        <p>Lean, hand-crafted HTML and CSS ensure light-speed rendering.</p>
+      </div>
+      <div class="card">
+        <h2>Eco-Friendly</h2>
+        <p>Hosted on minimal infrastructure to reduce digital carbon footprint.</p>
+      </div>
+      <div class="card">
+        <h2>Clean Structure</h2>
+        <p>Semantic HTML markup built with modern accessibility standards.</p>
+      </div>
+    </section>
   </main>
   <footer class="content-container">© 2026 GreenPage. All rights reserved.</footer>
 </body>
