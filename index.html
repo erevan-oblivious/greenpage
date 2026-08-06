@@ -6,6 +6,8 @@
   <title>Green Page</title> <!-- Sets the title of the webpage displayed in the browser tab -->
   <style> /* Internal CSS for styling the webpage */
     body { /* Global body styling */
+      display: flex; /* Enables flexbox layout for the whole body */
+      flex-direction: column; /* Stacks whole body including header, main, and footer vertically */
       background-color: #586654; /* Dark green background for a natural feel */
       margin: 0; /* Removes default margin for full-width layout */
       min-height: 100vh; /* Ensures the body takes at least the full viewport height */
@@ -63,7 +65,16 @@
     font-size: 0.95rem; /* Slightly smaller font size for card text */
     line-height: 1.5;   /* Gives lines of text room to breathe */
     } 
-  </style> /* End of internal CSS */
+    .site-footer {
+    margin-top: auto;       /* Pushes the footer to the bottom of the page by putting all available space above it */
+    background-color: #3b4739;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    color: #a3b8a3;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    } 
+  </style>
 </head>
 <body> <!-- Body section containing the visible content of the webpage -->
   <header class="header"> <!-- Header section containing the logo and navigation links -->
@@ -74,10 +85,10 @@
       <a href="#">Services</a>
     </nav>
   </header>
-  <main class="content-container">
+  <main class="content-container"> <!-- Main content container -->
     <h1>Welcome to GreenPage</h1>
     <p>Building clean, fast, eco-friendly web experiences.</p>
-    <section class="cards-container">
+    <section class="cards-container"> <!-- Container for the cards -->
       <div class="card">
         <h2>Fast Performance</h2>
         <p>Lean, hand-crafted HTML and CSS ensure light-speed rendering.</p>
@@ -92,6 +103,8 @@
       </div>
     </section>
   </main>
-  <footer class="content-container">© 2026 GreenPage. All rights reserved.</footer>
+  <footer class="site-footer">
+  <p>&copy; 2026 GreenPage. All rights reserved.</p>
+</footer>
 </body>
 </html>
