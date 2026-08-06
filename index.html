@@ -46,14 +46,12 @@
       color: #ffffff;               /* Brightens link text to solid white on hover */
     }
     .cards-container { /* Container for the cards */
-      display: flex; /* Flexbox layout for cards */
+      display: grid; /* Grid layout for cards */
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive column layout  */
       gap: 20px; /* Space between cards */
-      flex-wrap: wrap;    /* Wraps cards onto a new line on small screens */
       margin-top: 30px; /* Adds space above the cards */
     }   
     .card { /* Individual card styling */
-      flex: 1;            /* Forces all 3 cards to share available space equally */
-      min-width: 220px;   /* Triggers a wrap when a card gets narrower than 220px */
       background-color: #3b4739; /* Darker card background for contrast */
       padding: 24px; /* Adds internal spacing for content */
       border-radius: 8px; /* Softens the corners */
