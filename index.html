@@ -43,7 +43,7 @@
       transition: color 0.2s ease;  /* Smoothly animates color changes over 0.2 seconds */
     }
     .nav-links a:hover {
-      color: #ffffff;               /* Brightens link text to solid white on hover */
+      color: #ffffff; /* Brightens link text to solid white on hover */
     }
     .cards-container { /* Container for the cards */
       display: grid; /* Grid layout for cards */
@@ -63,6 +63,9 @@
       transform: translateY(-6px);                /* Lifts the card up by 6 pixels */
       border-color: #c0dbc0;                      /* Accent border highlight */
       box-shadow: 0 12px 24px #0000003A; /* Adds a soft shadow for depth */
+    }
+    .card:first-child {
+    grid-column: span 2;
     }
     .card h2 { /* Heading styling within cards */
       margin-top: 0; /* Removes default top margin for tighter spacing */
