@@ -65,7 +65,10 @@
       box-shadow: 0 12px 24px #0000003A; /* Adds a soft shadow for depth */
     }
     .card:first-child {
-    grid-column: span 4;
+    grid-column: 1 / -1;           /* Spans across all available columns */
+    background-color: #465443;     /* Slightly lighter green background to pop */
+    border-color: #c0dbc0;         /* Accent border */
+    padding: 32px;                 /* Slightly larger padding for prominence */
     }
     .card h2 { /* Heading styling within cards */
       margin-top: 0; /* Removes default top margin for tighter spacing */
