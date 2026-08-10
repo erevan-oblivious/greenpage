@@ -1,3 +1,4 @@
+@import "tailwindcss";
 /* Global CSS Variables for consistent theming across the site */
 :root {
   --bg-main: #2b3529;
