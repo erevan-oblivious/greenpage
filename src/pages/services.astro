@@ -7,15 +7,30 @@ import bannerImage from '../assets/banner.of.elements.png';
 <BaseLayout title="Our Services | Green Page">
 
   <main class="content-container"> <!-- Main content container -->
-    <h1>Our Services</h1>
+    <h1 class="heading">Our Services</h1>
     <p>Discover our range of eco-friendly web development and optimization solutions.</p>
-        <Image 
-          src={bannerImage} 
-          alt="Banner Image"
-          class="w-full h-80 object-cover"
-          format="webp"
+    <div class="overflow-hidden rounded-2xl shadow-md border border-slate-200">
+      <Image 
+        src={bannerImage} 
+        alt="Banner Image"
+        class="w-full h-80 object-cover"
+        format="webp"
           quality={80}
         />
+    </div>
+    <p>See our eco-friendly web development projects in action.</p>
+    <div class="relative overflow-hidden rounded-2xl shadow-lg border border-slate-200 bg-slate-900">
+      <video 
+        autoplay 
+        loop 
+        muted 
+        playsinline 
+        class="w-full h-96 object-cover opacity-90"
+      >
+        <source src="https://media.greenpage.uk/Goodfellow%20Farming%20Harvesting%20Barley%20(480p).mp4" type="video/mp4" />
+        Your browser does not support HTML5 video tags.
+        </video>
+      </div>
   </main>
 
 </BaseLayout>

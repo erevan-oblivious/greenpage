@@ -1,10 +1,10 @@
 @import "tailwindcss";
 /* Global CSS Variables for consistent theming across the site */
 :root {
-  --bg-main: #2b3529;
-  --bg-header: #333f31;
-  --bg-card: #333f31;
-  --bg-hero: #333f31;
+  --bg-main: #333f31; 
+  --bg-header: #2b3529 ;
+  --bg-card: #2b3529;
+  --bg-hero: #2b3529;
   --text-bright: #ffffff;
   --text-muted: #a3b8a3;
   --accent-light: #c0dbc0;
@@ -45,6 +45,7 @@ body { /* Global body styling */
   display: flex; /* Enables flexbox layout for the whole body */
   flex-direction: column; /* Stacks whole body including header, main, and footer vertically */
   font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
   background-color: var(--bg-main);
   color: var(--text-bright);
   margin: 0; /* Removes default margin for full-width layout */
@@ -56,6 +57,10 @@ body { /* Global body styling */
   align-items: center; /* Vertically centers items in the header */
   padding: 20px 40px; /* Adds padding around the header content */
   background-color: var(--bg-header); /* Darker header background for contrast */
+}
+.heading { /* Heading styling */
+  font-size: var(--font-size-lg); /* Uses the larger font size for headings */
+  margin: 0; /* Removes default margin for tighter spacing */
 }
 .logo { /* Logo styling */
 font-weight: bold; /* Makes the logo text bold for emphasis */
