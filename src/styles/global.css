@@ -1,10 +1,11 @@
-@import "tailwindcss";
-/* Global CSS Variables for consistent theming across the site */
-:root {
+@import "tailwindcss"; /* Import Tailwind CSS for utility-first styling */
+
+:root { /* Global CSS Variables for consistent styling */
   --bg-main: #333f31; 
   --bg-header: #2b3529 ;
   --bg-card: #2b3529;
   --bg-hero: #2b3529;
+  
   --text-bright: #ffffff;
   --text-muted: #a3b8a3;
   --accent-light: #c0dbc0;
@@ -12,34 +13,7 @@
 
   --font-family-base: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-size-base: 1rem;
-  --font-size-lg: 1.2rem;
-}
-/* Fluid Media Reset */
-img, video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-.card-image {
-  width: 100%;
-  aspect-ratio: auto; /* Maintains the original aspect ratio of the image */
-  object-fit: cover;    /* Centers and crops the image to fit without stretching */
-  border-radius: 6px;
-  margin-bottom: 16px;
-}
-/* Responsive Video Container */
-.video-container {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  margin: 24px 0;
-  border-radius: 8px;
-  overflow: hidden;
-}
-.video-container iframe,
-.video-container video {
-  width: 100%;
-  height: 100%;
-  border: none;
+  --font-size-lg: 1.25rem;
 }
 body { /* Global body styling */
   display: flex; /* Enables flexbox layout for the whole body */
@@ -51,29 +25,17 @@ body { /* Global body styling */
   margin: 0; /* Removes default margin for full-width layout */
   min-height: 100vh; /* Ensures the body takes at least the full viewport height */
 }
+img, video { /* Fluid Media Reset */
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 .header { /* Header styling */
   display: flex; /* Flexbox layout for header */
   justify-content: space-between; /* Distributes space between logo and navigation links */
   align-items: center; /* Vertically centers items in the header */
   padding: 20px 40px; /* Adds padding around the header content */
   background-color: var(--bg-header); /* Darker header background for contrast */
-}
-.heading { /* Heading styling */
-  font-size: var(--font-size-lg); /* Uses the larger font size for headings */
-  margin: 0; /* Removes default margin for tighter spacing */
-}
-.logo { /* Logo styling */
-font-weight: bold; /* Makes the logo text bold for emphasis */
-font-size: var(--font-size-lg); /* Slightly larger font size for the logo */
-letter-spacing: 1px; /* Adds spacing between letters for a cleaner look */
-}
-.content-container { /* Main content container styling */
-  text-align: center; /* Centers the content horizontally */
-  padding: 40px;/* Adds padding around the main content for spacing */
-}
-ul { /* Styling for unordered lists */
-  list-style-position: inside; /* Ensures bullets are inside the list item box */
-  padding: 0; /* Removes default padding for cleaner alignment */
 }
 .nav-links { /* Navigation links container styling */
   display: flex; /* Flexbox layout for navigation links */
@@ -86,6 +48,46 @@ ul { /* Styling for unordered lists */
 }
 .nav-links a:hover {
   color: var(--text-bright); /* Brightens link text to solid white on hover */
+}
+.main { /* Main content area styling */
+  flex-grow: 1;
+  max-width: 56rem; /* 896px */
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;    /* 32px */
+}
+.content-container { /* Main content container styling */
+  text-align: center; /* Centers the content horizontally */
+  padding: 40px;/* Adds padding around the main content for spacing */
+}
+.heading { /* Heading styling */
+  font-size: var(--font-size-lg); /* Uses the larger font size for headings */
+  margin: 0; /* Removes default margin for tighter spacing */
+}
+ul { /* Styling for unordered lists */
+  list-style-position: inside; /* Ensures bullets are inside the list item box */
+  padding: 0; /* Removes default padding for cleaner alignment */
+}
+.image-container { /* Responsive Image Container */
+  width: 100%;
+  aspect-ratio: auto; /* Maintains the original aspect ratio of the image */
+  object-fit: cover;    /* Centers and crops the image to fit without stretching */
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.video-container { /* Responsive Video Container */
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 24px 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.video-container iframe,
+.video-container video {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 .cards-container { /* Container for the cards */
   display: flex;
@@ -107,41 +109,35 @@ ul { /* Styling for unordered lists */
   border-color: var(--accent-light);                      /* Accent border highlight */
   box-shadow: 0 12px 24px var(--bg-main); /* Adds a soft shadow for depth */
 }
-.card:first-child {
-flex: 1 1 100%;           /* Makes the first card take full width on larger screens */
-background-color: var(--bg-hero);     /* Slightly lighter green background to pop */
-border-color: var(--accent-light);         /* Accent border */
-padding: 32px;                 /* Slightly larger padding for prominence */
-}
 .card h2 { /* Heading styling within cards */
   margin-top: 0; /* Removes default top margin for tighter spacing */
   color: var(--accent-light);     /* Muted light green accent color for headings */
 } 
 .card p { /* Paragraph styling within cards */
-margin-bottom: 0; /* Removes default bottom margin for tighter spacing */
-font-size: var(--font-size-base); /* Uses the base font size for card text */
-line-height: 1.5;   /* Gives lines of text room to breathe */
+  margin-bottom: 0; /* Removes default bottom margin for tighter spacing */
+  font-size: var(--font-size-base); /* Uses the base font size for card text */
+  line-height: 1.5;   /* Gives lines of text room to breathe */
 } 
-.site-footer { /* Footer styling */
-margin-top: auto;       /* Pushes the footer to the bottom of the page by putting all available space above it */
-background-color: var(--bg-footer);
-text-align: center;
-padding: 20px;
-font-size: var(--font-size-base);
-color: var(--text-muted);
-border-top: 1px solid var(--border-color);
+.footer { /* Footer styling */
+  margin-top: auto;       /* Pushes the footer to the bottom of the page by putting all available space above it */
+  background-color: var(--bg-footer);
+  text-align: center;
+  padding: 20px;
+  font-size: var(--font-size-base);
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-color);
 }
 @media (max-width: 600px) {
-  .header {
+.header {
   flex-direction: column; /* Overrides row alignment to stack logo and nav vertically */
   gap: 15px;             /* Creates vertical space between logo and nav links */
   padding: 20px;          /* Reduces horizontal padding on narrow screens */
   }
-  .nav-links {
+.nav-links {
   flex-wrap: wrap;       /* Allows links to wrap safely if the screen is extremely narrow */
   justify-content: center;
   }
-  .card { /* Individual card styling */
+.card { /* Individual card styling */
   text-align: center;   /* center-aligns inner card text for cleaner reading */
   }
 }
